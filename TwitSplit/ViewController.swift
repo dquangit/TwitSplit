@@ -12,12 +12,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let messageViewController = storyboard.instantiateViewController(withIdentifier: "MessageViewController")
+        present(messageViewController, animated: false, completion: nil)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+    
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

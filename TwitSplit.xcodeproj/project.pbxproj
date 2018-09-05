@@ -15,6 +15,15 @@
 		744E766A213A66FD000666DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 744E7668213A66FD000666DC /* LaunchScreen.storyboard */; };
 		744E7675213A66FE000666DC /* TwitSplitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744E7674213A66FE000666DC /* TwitSplitTests.swift */; };
 		744E7680213A66FE000666DC /* TwitSplitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744E767F213A66FE000666DC /* TwitSplitUITests.swift */; };
+		744E7694213D8F6A000666DC /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744E7693213D8F6A000666DC /* MessageViewController.swift */; };
+		744E7696213D8F8C000666DC /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744E7695213D8F8C000666DC /* MessageViewModel.swift */; };
+		744E7698213D8FA6000666DC /* MessageLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744E7697213D8FA6000666DC /* MessageLogic.swift */; };
+		744E769B213DC38B000666DC /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744E769A213DC38B000666DC /* MessageTableViewCell.swift */; };
+		744E769D213DD0C0000666DC /* MessageCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744E769C213DD0C0000666DC /* MessageCenter.swift */; };
+		744E769E213DD12A000666DC /* MessageLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744E7697213D8FA6000666DC /* MessageLogic.swift */; };
+		744E76A0213DD163000666DC /* MessageLogicTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744E769F213DD163000666DC /* MessageLogicTest.swift */; };
+		74A86F44213EFDA000CE8A6D /* SplitMessageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A86F43213EFDA000CE8A6D /* SplitMessageError.swift */; };
+		74FEC9B521402AF000C52CE7 /* SplitMessageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A86F43213EFDA000CE8A6D /* SplitMessageError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,13 @@
 		744E767B213A66FE000666DC /* TwitSplitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitSplitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		744E767F213A66FE000666DC /* TwitSplitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitSplitUITests.swift; sourceTree = "<group>"; };
 		744E7681213A66FE000666DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		744E7693213D8F6A000666DC /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		744E7695213D8F8C000666DC /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		744E7697213D8FA6000666DC /* MessageLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLogic.swift; sourceTree = "<group>"; };
+		744E769A213DC38B000666DC /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		744E769C213DD0C0000666DC /* MessageCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCenter.swift; sourceTree = "<group>"; };
+		744E769F213DD163000666DC /* MessageLogicTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLogicTest.swift; sourceTree = "<group>"; };
+		74A86F43213EFDA000CE8A6D /* SplitMessageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitMessageError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,7 @@
 		744E765B213A66FA000666DC /* TwitSplit */ = {
 			isa = PBXGroup;
 			children = (
+				74A86F42213EFD6F00CE8A6D /* Error */,
 				744E7692213D8890000666DC /* Configurations */,
 				744E7691213D859F000666DC /* Resources */,
 				744E7690213D8588000666DC /* Logics */,
@@ -107,6 +124,7 @@
 				744E768D213D8556000666DC /* Views */,
 				744E765C213A66FA000666DC /* AppDelegate.swift */,
 				744E765E213A66FA000666DC /* ViewController.swift */,
+				744E766B213A66FE000666DC /* Info.plist */,
 				744E7663213A66FA000666DC /* TwitSplit.xcdatamodeld */,
 			);
 			path = TwitSplit;
@@ -115,6 +133,7 @@
 		744E7673213A66FE000666DC /* TwitSplitTests */ = {
 			isa = PBXGroup;
 			children = (
+				744E769F213DD163000666DC /* MessageLogicTest.swift */,
 				744E7674213A66FE000666DC /* TwitSplitTests.swift */,
 				744E7676213A66FE000666DC /* Info.plist */,
 			);
@@ -133,6 +152,8 @@
 		744E768D213D8556000666DC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				744E7699213DC363000666DC /* Cells */,
+				744E7693213D8F6A000666DC /* MessageViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,6 +168,8 @@
 		744E768F213D857D000666DC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				744E7695213D8F8C000666DC /* MessageViewModel.swift */,
+				744E769C213DD0C0000666DC /* MessageCenter.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -154,6 +177,7 @@
 		744E7690213D8588000666DC /* Logics */ = {
 			isa = PBXGroup;
 			children = (
+				744E7697213D8FA6000666DC /* MessageLogic.swift */,
 			);
 			path = Logics;
 			sourceTree = "<group>";
@@ -171,9 +195,24 @@
 		744E7692213D8890000666DC /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
-				744E766B213A66FE000666DC /* Info.plist */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		744E7699213DC363000666DC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				744E769A213DC38B000666DC /* MessageTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		74A86F42213EFD6F00CE8A6D /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				74A86F43213EFDA000CE8A6D /* SplitMessageError.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,8 +346,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				744E769B213DC38B000666DC /* MessageTableViewCell.swift in Sources */,
 				744E765F213A66FA000666DC /* ViewController.swift in Sources */,
 				744E765D213A66FA000666DC /* AppDelegate.swift in Sources */,
+				744E7698213D8FA6000666DC /* MessageLogic.swift in Sources */,
+				74A86F44213EFDA000CE8A6D /* SplitMessageError.swift in Sources */,
+				744E769D213DD0C0000666DC /* MessageCenter.swift in Sources */,
+				744E7696213D8F8C000666DC /* MessageViewModel.swift in Sources */,
+				744E7694213D8F6A000666DC /* MessageViewController.swift in Sources */,
 				744E7665213A66FA000666DC /* TwitSplit.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +362,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				744E76A0213DD163000666DC /* MessageLogicTest.swift in Sources */,
+				74FEC9B521402AF000C52CE7 /* SplitMessageError.swift in Sources */,
+				744E769E213DD12A000666DC /* MessageLogic.swift in Sources */,
 				744E7675213A66FE000666DC /* TwitSplitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
