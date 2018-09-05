@@ -12,8 +12,11 @@ class MessageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var message: UILabel!
     
+    @IBOutlet weak var messageBackground: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        messageBackground.layer.cornerRadius = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

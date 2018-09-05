@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import UITextView_Placeholder
 
 class MessageViewController: UIViewController {
     
     @IBOutlet weak var messageTableView: UITableView!
     
     @IBOutlet weak var messageInput: UITextView!
+    
+    @IBOutlet weak var sendButton: UIButton!
     
     var messageCenter: MessageCenter!
     var messages: [String]! = [String]()
@@ -30,6 +33,22 @@ class MessageViewController: UIViewController {
         messageCenter = MessageViewModel()
         messageCenter.delegate = self
         messageTableView.dataSource = self
+        messageTableView.delegate = self
+        messageInput.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setupView()
+    }
+    
+    /// Set up chat view.
+    /// Hide send button
+    /// Set place holder text and color for inputMessage
+    func setupView() {
+        messageInput.textContainerInset = UIEdgeInsetsMake(4, 4, 4, self.messageInput.frame.size.width - sendButton.frame.origin.x + 8)
+        sendButton.isHidden = true
+        messageInput.placeholder = "Type your message here ..."
+        messageInput.placeholderColor = UIColor.lightGray
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,11 +56,20 @@ class MessageViewController: UIViewController {
     }
     
     @IBAction func sendMessage(_ sender: Any) {
-        send()
+        messageInputEndEditting()
     }
     
-    func send() {
+    /// Called when user pressed send or done button.
+    /// Hide keyboard and take view to begin position after IQKeyboardManager bring it up.
+    /// Hide send button.
+    /// Send message.
+    func messageInputEndEditting() {
         let message = messageInput.text
+        messageInput.endEditing(true)
+        self.view.bounds = CGRect(origin: CGPoint(x: 0, y: 0), size: self.view.bounds.size);
+        self.view.setNeedsLayout()
+        self.view.layoutIfNeeded()
+        sendButton.isHidden = true
         messageCenter.sendMessage(message)
     }
 }
@@ -56,6 +84,13 @@ extension MessageViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell") as! MessageTableViewCell
         cell.message.text = messages[indexPath.row]
         return cell
+    }
+}
+
+extension MessageViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
 }
 
@@ -80,8 +115,22 @@ extension MessageViewController: MessageCenterDelegate {
         messageTableView.scrollToRow(at: bottomIndex, at: .bottom, animated: true)
         messageInput.text = ""
         let result = appendableMessages.filter { element in
-            return element.count > MessageLogic.chunkCapacity
+            return element.count > MessageModel.chunkCapacity
         }
         print(result)
+    }
+}
+
+extension MessageViewController: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            messageInputEndEditting()
+        }
+        return true
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        sendButton.isHidden = false
     }
 }

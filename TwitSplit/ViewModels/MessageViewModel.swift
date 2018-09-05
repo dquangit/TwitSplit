@@ -15,7 +15,7 @@ class MessageViewModel: MessageCenter {
     var messageLogic: MessageLogic!
     
     init() {
-        messageLogic = MessageLogic()
+        messageLogic = MessageModel()
     }
     
     func sendMessage(_ message: String!) {
@@ -27,7 +27,7 @@ class MessageViewModel: MessageCenter {
             let messages = try messageLogic.splitMessage(message)
             delegate?.onReceivedMessages(messages)
         } catch SplitMessageError.wordExcessedCapacity {
-            let errorMessage = String(format: "Message has word excessed %d characters.", MessageLogic.chunkCapacity)
+            let errorMessage = String(format: "Message contained word had size excessed %d characters.", MessageModel.chunkCapacity)
             delegate?.onMessageSplitFailed(errorMessage)
         } catch {
             let errorMessage = "Unknown reason."

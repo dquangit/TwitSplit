@@ -1,0 +1,6 @@
+framework module Pods_TwitSplitUITests {
+  umbrella header "Pods-TwitSplitUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
