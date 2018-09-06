@@ -34,19 +34,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="442-3l-fPW">
-                                <rect key="frame" x="0.0" y="606" width="375" height="61"/>
-                                <color key="backgroundColor" red="0.0" green="0.89741386094543341" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="0.0" y="612" width="375" height="55"/>
+                                <color key="backgroundColor" red="0.26507081059999998" green="0.70179801549999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="Rdv-Hz-mtx"/>
+                                    <constraint firstAttribute="height" constant="55" id="Rdv-Hz-mtx"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QsF-rn-UVD">
-                                <rect key="frame" x="0.0" y="68" width="375" height="538"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.92525656649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="sectionIndexBackgroundColor" red="0.0" green="1" blue="0.92525656649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="0.0" y="68" width="375" height="544"/>
+                                <color key="backgroundColor" red="0.94414085579999996" green="0.96541878169999995" blue="0.95335369660000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="sectionIndexBackgroundColor" red="0.94414085575173723" green="0.96541878172588835" blue="0.95335369663230951" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageCell" rowHeight="67" id="aTa-0Z-AcZ" customClass="MessageTableViewCell" customModule="TwitSplit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="67"/>
@@ -65,7 +65,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.0" green="0.89741386089999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="backgroundColor" red="0.26507081059999998" green="0.70179801549999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstItem="49t-nS-VSn" firstAttribute="leading" secondItem="g5E-jI-W2q" secondAttribute="leading" constant="8" id="2gc-3c-uoz"/>
                                                         <constraint firstAttribute="bottom" secondItem="49t-nS-VSn" secondAttribute="bottom" id="Br8-ja-PL7"/>
@@ -80,7 +80,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="g5E-jI-W2q" secondAttribute="bottom" id="eEy-4K-1AA"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="1" blue="0.92525656650758936" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.94414085579999996" green="0.96541878169999995" blue="0.95335369660000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <outlet property="message" destination="49t-nS-VSn" id="npv-Dm-p1I"/>
                                             <outlet property="messageBackground" destination="g5E-jI-W2q" id="tCg-qS-gki"/>
@@ -89,7 +89,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edg-ZO-I0V">
-                                <rect key="frame" x="323" y="618" width="36" height="36"/>
+                                <rect key="frame" x="323" y="621" width="36" height="36"/>
                                 <state key="normal" image="baseline_send_white_36pt"/>
                                 <connections>
                                     <action selector="sendMessage:" destination="D1a-uB-ZVK" eventType="touchUpInside" id="2Jt-f8-o1C"/>
@@ -97,7 +97,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TwitSplit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKc-cC-uG8">
                                 <rect key="frame" x="0.0" y="20" width="375" height="48"/>
-                                <color key="backgroundColor" red="0.26507081055678927" green="0.70179801551748056" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.35294117647058826" green="0.70588235294117652" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="dnu-4I-Xth"/>
                                 </constraints>

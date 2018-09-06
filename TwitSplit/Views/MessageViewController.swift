@@ -47,8 +47,8 @@ class MessageViewController: UIViewController {
     func setupView() {
         messageInput.textContainerInset = UIEdgeInsetsMake(4, 4, 4, self.messageInput.frame.size.width - sendButton.frame.origin.x + 8)
         sendButton.isHidden = true
-        messageInput.placeholder = "Type your message here ..."
-        messageInput.placeholderColor = UIColor.lightGray
+        messageInput.placeholder = "Tweet me..."
+        messageInput.placeholderColor = UIColor.lightText
     }
     
     override func didReceiveMemoryWarning() {
@@ -114,10 +114,6 @@ extension MessageViewController: MessageCenterDelegate {
         let bottomIndex = IndexPath(row: messages.count - 1, section: 0)
         messageTableView.scrollToRow(at: bottomIndex, at: .bottom, animated: true)
         messageInput.text = ""
-        let result = appendableMessages.filter { element in
-            return element.count > MessageModel.chunkCapacity
-        }
-        print(result)
     }
 }
 
